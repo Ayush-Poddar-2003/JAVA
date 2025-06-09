@@ -1,11 +1,15 @@
-The javax.sql package provides Advanced JDBC features like:
+# Javax Sql
 
-- Connection pooling (DataSource)
-- RowSet interfaces for working with data in a disconnected way
-- XADataSource for distributed transactions
+The javax.sql package extends the JDBC API with features for enterprise-level applications:
 
-| Feature     | DriverManager | DataSource                |
-| ----------- | ------------- | ------------------------- |
-| Type        | Basic JDBC    | Advanced (pooled, secure) |
-| Use         | Small apps    | Enterprise apps           |
-| Flexibility | Limited       | More control, scalability |
+| Interface                  | Use                                                          |
+| -------------------------- | ------------------------------------------------------------ |
+| `DataSource`               | Replacement for DriverManager. Better for connection pooling |
+| `ConnectionPoolDataSource` | For managing pooled DB connections                           |
+| `RowSet`                   | Disconnected, scrollable result sets                         |
+
+---
+### Why use DataSource?
+- Better performance with connection pooling
+- Easier to manage in enterprise apps (like in JNDI contexts)
+

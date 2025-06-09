@@ -3,7 +3,7 @@
 Java Database Connectivity  
 Java API used to connect and interact with databases.
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 Steps to connect to database in JAVA
 
